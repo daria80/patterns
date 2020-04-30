@@ -1,4 +1,4 @@
-package Singleton;
+package Creational.Singleton;
 
 public class Start {
 
@@ -6,8 +6,13 @@ public class Start {
         TestSingleton.getInstance().print();
         TestSingleton.getInstance().print();
         TestSingleton.getInstance().print();
-
         TestSingleton.getInstance().stop();
+
+        TestSingleton1.getInstance().print();
+        TestSingleton1.getInstance().stop();
+
+        TestSingleton.instance.print();
+        TestSingleton.instance.stop();
 
     }
 }
