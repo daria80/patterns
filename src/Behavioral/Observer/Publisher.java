@@ -3,6 +3,7 @@ package Behavioral.Observer;
 import java.util.ArrayList;
 
 public class Publisher implements PublisherInterface {
+
     private ArrayList<PublisherActionListener> listeners = new ArrayList<>();
 
     @Override
@@ -25,6 +26,10 @@ public class Publisher implements PublisherInterface {
         listeners.clear();
     }
 
+    public void createNewMessage(String message) {
+        System.out.println("Publisher printed message  " + message);
+        notifySubscribers(message);
+    }
 
     @Override
     public void notifySubscribers(String message) {
@@ -32,12 +37,6 @@ public class Publisher implements PublisherInterface {
             actionListener.doAction(message);
         }
     }
-    public void createNewMessage(String message) {
-        System.out.println("Publisher printed message" + message);
-        notifySubscribers(message);
-    }
-
-
 
 
 }

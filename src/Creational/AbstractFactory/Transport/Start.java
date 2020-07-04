@@ -22,8 +22,9 @@ public class Start {
             factory = new USAFactory();
         }
 
-        factory.createAircraft();
-        factory.createCar();
+        factory.createAircraft().flight();
+
+        factory.createCar().drive();
 
 
     }
